@@ -4,5 +4,9 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt
 cd package/openwrt-packages/openwrt-passwall2
 COMMIT_HASH=$(git log --grep="bump" --pretty=format:'%H' -n 1)
 git checkout "$COMMIT_HASH"
-# cd ../openwrt-passwall-packages
-# git checkout 825aa3a00ad839f3f2521f7e06750a271dabae17
+
+#----临时降级passwall2
+git checkout 4e3932b6cd0ac75095383434c4139d12c63bdbcb
+cd ../openwrt-passwall-packages
+git checkout 0d16b37cb37c7a5a22f401b01932521d04ca2273
+#--------------------
